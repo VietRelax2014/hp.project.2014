@@ -1,0 +1,37 @@
+*{margin:0;padding:0}
+.flowplayer{background-color:#222;background-size:cover;max-width:800px;width:80%}
+.dt-sub-large>p{font-size:30px}
+.flowplayer .fp-controls{background-color:rgba(17,17,17,1)}
+.flowplayer .fp-timeline{background-color:rgba(204,204,204,1);top:7px;margin:0 235px 0 45px}
+.flowplayer .fp-progress{background-color:rgba(0,167,200,1)}
+.flowplayer .fp-buffer{background-color:rgba(249,249,249,1)}
+.flowplayer .fp-volume{right:125px;top:10px}
+.flowplayer .fp-volumeslider{width:60px}
+.flowplayer .fp-duration{right:198px;bottom:-13px}
+.fhd-sub{bottom:20px;color:#FFF;display:none;font-size:16px;position:absolute;text-align:center;width:100%;z-index:20}
+.fhd-sub.fhd-sub-active{display:block}
+#dialog-box{position:absolute}
+.div-table{background-color:#000;border:1px solid #666;border-radius:4px;border-spacing:5px;color:#fff;display:table;width:auto}
+.div-table-row{clear:both;display:table-row;width:auto}
+.div-table-col{cursor:default;display:table-column;float:left;text-align:center;width:94px}
+.fhd-sub-lang:nth-child(n+1):hover,.fhd-sub-size:nth-child(n+1):hover{color:red;cursor:pointer}
+.fp-controls{height:25px!important}
+.fhd-quality{background:#FFF url(http://a.dryicons.com/images/icon_sets/polygon_icons/png/256x256/fullscreen.png) -14px -15px no-repeat;width:25px;height:25px;background-size:54px}
+.flowplayer .fhd-sub-button,.flowplayer .fhd-en-vi-button,.flowplayer .fhd-quality{position:absolute;top:0;color:#FFF;font-weight:700;line-height:25px}
+.flowplayer .fhd-sub-button:hover,.flowplayer .fhd-en-vi-button:hover,.flowplayer .fhd-quality:hover{color:#FFD145}
+.flowplayer .fhd-sub-button{right:100px}
+.flowplayer .fhd-en-vi-button{right:45px}
+.flowplayer .fhd-quality{right:10px;border-radius:3px}
+.flowplayer .fhd-quality:hover{animation:myfirst 1s;-webkit-animation:myfirst 1s;background-color:#FFD145}
+@keyframes myfirst
+{
+0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}  
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+
+0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}  
+}

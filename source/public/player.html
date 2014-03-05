@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- player skin -->
+		<link rel="stylesheet" type="text/css" href="flow-player/skin/minimalist.css">
+		<link rel="stylesheet" type="text/css" href="css/custom-player.css">
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script type="text/javascript" src="flow-player/flowplayer.min.js"></script>
+		<script type="text/javascript" src="js/custom-player.js"></script>
+		<script type="text/javascript" src="js/sub-html5.js"></script>
+		<!-- <script type="text/javascript" src="minify/g=js"></script> -->
+	</head>
+
+	<body>
+		<div data-swf="flow-player//flowplayer.swf" class="flowplayer fixed-controls no-toggle play-button" data-ratio="0.416">
+			<video
+				poster="http://farm5.staticflickr.com/4117/4870052004_c0997bcf8d_b.jpg"
+				loop="loop" id="video">
+				<source type="video/webm" src="http://stream.flowplayer.org/bauhaus/624x260.webm" />
+				<source type="video/mp4" src="http://stream.flowplayer.org/bauhaus/624x260.mp4" />
+				<source type="video/ogv" src="http://stream.flowplayer.org/bauhaus/624x260.ogv" />
+			</video>
+			<div class="srt fhd-sub" sub-lang="EN" data-video="video" data-srt="sub/Thor.The.Dark.World.2013.R6.HDCAM.Xvid-CRYS.srt"></div>
+			<div class="srt fhd-sub" sub-lang="VI" data-video="video" data-srt="sub/Frozen.2013.TS.x264.AC3-MiLLENiUM___[HomeSub.vn].srt"></div>
+		</div>
+	
+		<script type="text/javascript">
+		
+		</script>
+	
+		<div id="dialog-box" style="display: none;">
+			<div class="div-table">
+				<div class="div-table-row">
+					<div class="div-table-col">PHUDE</div>
+					<div class="div-table-col">COCHU</div>
+				</div>
+				<div class="div-table-row">
+					<div class="div-table-col fhd-sub-lang" lang="EN">Anh</div>
+					<div class="div-table-col fhd-sub-size" size="large">LON</div>
+				</div>
+				<div class="div-table-row">
+					<div class="div-table-col fhd-sub-lang" lang="VI">VI</div>
+					<div class="div-table-col fhd-sub-size" size="medium">VUA</div>
+				</div>
+				<div class="div-table-row">
+					<div class="div-table-col fhd-sub-lang" lang="OFF">OFF</div>
+					<div class="div-table-col fhd-sub-size" size="minium">NHO</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
