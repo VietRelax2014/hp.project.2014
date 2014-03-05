@@ -1,4 +1,22 @@
 @extends('layouts.footer')
+@if( $isJWplayer ) 
+	@section('footer-script')
+		<script type='text/javascript'>
+			jwplayer('jw-player').setup({
+				file: '{{$videoLst["file"]}}',
+				width: '760',
+				height: '430',
+				fallback: 'false',
+				skin: "five",
+				logo: {
+					/* file: "https://lh4.googleusercontent.com/m2TUGgl8PkFFEOoaBCtRjJ7DAHhvdV3_b6Kmk1glqVI=w368-h207-p-no",
+					link: "http://google.com" */
+				}
+			});
+		</script>
+	@stop
+@endif
+
 @include ('layouts.header')
 
 @if($isJWplayer)
@@ -29,22 +47,3 @@
 			</video>
 		@endif
 	</div>
-
-
-@if( $isJWplayer )
-	@section('footer-script')
-		<script type='text/javascript'>
-			jwplayer('jw-player').setup({
-				file: '{{$videoLst["file"]}}',
-				width: '760',
-				height: '430',
-				fallback: 'false',
-				skin: "five",
-				logo: {
-					/* file: "https://lh4.googleusercontent.com/m2TUGgl8PkFFEOoaBCtRjJ7DAHhvdV3_b6Kmk1glqVI=w368-h207-p-no",
-					link: "http://google.com" */
-				}
-			});
-		</script>
-	@stop
-@endif

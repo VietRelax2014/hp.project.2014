@@ -105,10 +105,36 @@ class View implements ArrayAccess, Renderable {
 		// so that each sections get flushed out next time a view is created and
 		// no old sections are staying around in the memory of an environment.
 		$this->environment->decrementRender();
+		
+		// Phuong.nm Added
+		$content = $this->minify_output ( $contents );
 
-		return $contents;
+		return $content;
 	}
 
+	/**
+	 * Dev : Phuong.nm
+	 * Minify Html
+	 *
+	 * @return String
+	 */
+	public function minify_output($buffer) {
+		$search = array (
+				'/\>[^\S ]+/s',
+				'/[^\S ]+\</s',
+				'/(\s)+/s'
+		);
+		$replace = array(
+				'>',
+				'<',
+				'\\1'
+		);
+		if (preg_match("/\<html/i",$buffer) == 1 && preg_match("/\<\/html\>/i",$buffer) == 1) {
+			$buffer = preg_replace($search, $replace, $buffer);
+		}
+		return $buffer;
+	}
+	
 	/**
 	 * Get the sections of the rendered view.
 	 *

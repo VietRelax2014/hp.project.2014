@@ -7,9 +7,12 @@
 			height: '430',
 			loader: 'bar',
 			pagination: false,
-			thumbnails: true,
+			thumbnails: false,
 			hover: true,
 			opacityOnGrid: false,
+			playPause : false,
+			fx:'scrollLeft',
+			transPeriod: 1000,
 			imagePath: 'layouts/images/slider-images/'
 		});
 	};
