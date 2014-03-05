@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', "HomeController@redirectHome");
-
-Route::get ( '/watcher/{id}', "WatcherController@watching" );
+Route::get('/', function()
+{
+	return View::make('hello');
+});
