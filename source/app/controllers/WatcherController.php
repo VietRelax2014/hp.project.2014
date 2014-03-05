@@ -29,7 +29,6 @@ class WatcherController extends BaseController {
 
 	public function watching($id)
 	{
-		var_dump(phpinfo());
 		$id;
 		if($id == 'youtube'){
 			$url = 'https://www.youtube.com/watch?v=RoYp2_FiaDw';
