@@ -108,6 +108,7 @@
 		<script src="/layouts/javascript/camera.min.js"></script>
 		<script src="/layouts/javascript/jquery.mobile.customized.min.js"></script>
 	@endif
+
 	<script src="/layouts/javascript/jquery.mobile.customized.min.js"></script>
 	<script type="text/javascript" src="/layouts/javascript/modernizr.2.5.3.min.js"></script>
 	<!-- jQuery Switcher -->
@@ -119,5 +120,7 @@
 
 	<!-- END JAVASCRIPT
 	================================================== -->
+	@yield('footer-script')
+
 </body>
 </html>

@@ -22,9 +22,11 @@
 		border-radius: 3px;
 	}
 	
-	#container {
+	#category_content {
 		margin: 0 auto;
-		width: 665px	
+		width: 665px;	
+		height:500px;
+		margin-top:20px;
 	}
 	
 	.thumb {
@@ -144,7 +146,7 @@
 	</script>
 	
 
-<div id="container" style="margin-top:10px;">
+<div id="category_content">
 	<div class="thumb scroll">
 		<div class="thumb-wrapper">
 			<img src="images/9.jpeg" alt="" />
