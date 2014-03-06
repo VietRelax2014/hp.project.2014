@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\View;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -14,3 +15,7 @@
 Route::get('/', "HomeController@redirectHome");
 
 Route::get ( '/watcher/{id}', "WatcherController@watching" );
+
+Route::get ( '/getIMDb', function(){
+	return View::make('getIMDbDemo', array('page' => 'getIMDb'));	
+});

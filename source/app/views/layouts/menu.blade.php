@@ -1,7 +1,3 @@
-<style>
-
-</style>
-
 <div class="hdv-three-fifth">
 	<div class='nav-navigation'>
 		<ul>
@@ -23,11 +19,15 @@
 			<li><a href='#'><span>Contact</span></a></li>
 		</ul>
 	</div>
-
 </div>
 <div class="hdv-one-fifth hdv-last">
-	<div class="hdv-search-header">
-		<i class="icon-magnifier"></i>
-	</div>
+	<form id="searchForm">
+		<fieldset>
+			<div class="input">
+				<input type="text" name="s" id="s" placeholder="Enter your search" />
+			</div>
+			<input type="submit" id="searchSubmit" value="" />
+		</fieldset>
+	</form>
 	<!-- End Search Header -->
 </div>
