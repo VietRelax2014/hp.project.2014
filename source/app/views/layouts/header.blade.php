@@ -18,11 +18,10 @@
 
 	<!-- Theme Stylesheets
 	================================================== -->
-	<link rel="stylesheet" href="/layouts/css/style.css">
-	<link rel="stylesheet" href="/layouts/css/players.css">
+	{{ HTML::style('/layouts/css/collection.css') }}
+
 	<link rel="stylesheet" href="/layouts/css/colors/red.css" name="colors">
 	<link rel="stylesheet" href="/layouts/css/layout/wide.css" name="layout">
-	<link rel="stylesheet" href="/layouts/css/camera.css">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

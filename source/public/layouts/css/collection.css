@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+
+/*
+-----------------------------------------------------------------  
+*   TABLE OF CONTENTS
+*       1. ALL NECESSARY CSS FILES & THEME FONTS
+*       2. BEGIN THEME STYLESHEET
+*           1.1 HEADER
+*       
+*       3. MEDIA QUERIES
+-----------------------------------------------------------------
+*/
+
+/* ---------------------------------------------------
+   ALL NECESSARY CSS FILES & THEME FONTS
+--------------------------------------------------- */
+@import url("skeleton/base.css");                                       /* Reset & Basics */
+@import url("skeleton/skeleton.css");                                   /* 960 Skeleton Grid */
+@import url("fonts/simple-line/css/simple-line-icons.css");             /* Font Simple-line Icons */
+@import url("fonts/fontello/css/fontello.css");                         /* Fontello Zocial Font */
+@import url("button.css");                                              /* Css Styles for Button */
+@import url("javascript.css");                                          /* Css Styles for Javascript Plugins */
+@import url("players.css");                                             /* Css Styles for Players */
+@import url("camera.css");                                              /* Css Styles for Camera Plugins */
+@import url("style.css");                                              /* Css Styles for Camera Plugins */
+
+/* body font */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/IczWvq5y_Cwwv_rBjOtT0w.woff') format('woff');
+}
+
+/* headings font - http://www.fontspring.com/fonts/fontfabric/code-pro */
+@font-face {
+    font-family: 'CodeProDemoRegular';
+    src: url('fonts/Code_Pro_Demo-webfont.eot');
+    src: url('fonts/Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Code_Pro_Demo-webfont.woff') format('woff'),
+         url('fonts/Code_Pro_Demo-webfont.ttf') format('truetype'),
+         url('fonts/Code_Pro_Demo-webfont.svg#CodeProDemoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CaviarBold';
+    src: url('fonts/Caviar/UVF_Caviar_Dreams_Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
