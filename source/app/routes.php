@@ -16,6 +16,8 @@ Route::get('/', "HomeController@redirectHome");
 
 Route::get ( '/watcher/{id}', "WatcherController@watching" );
 
-Route::get ( '/getIMDb', function(){
-	return View::make('getIMDbDemo', array('page' => 'getIMDb'));	
+Route::get ( '/updateFilm', function(){
+	return View::make('getIMDbDemo' , array('page' => 'imdb'));
 });
+
+Route::get ( '/getIMDb/{url}', "GetIMDbController@getIMDbByURL" );

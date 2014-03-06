@@ -112,6 +112,29 @@
 			});
 		}
 	};
+	
+	$.fn.getIMDb = function(){
+		$('.getIMDb').on('click', function(){
+			$('input[name="nameFilm"]').val();
+			/* $.get('http://phphost:69/getIMDb', function(data) {
+		           console.log(data);
+		        });*/
+			var url = $('input[name="nameFilm"]').val();
+			$.ajax({
+				url : "http://phphost:69/getIMDb/"+url.substring(url.lastIndexOf("/") + 1),
+				type : "GET",
+				dataType : "json",
+				success: function(data, textStatus, xhr) {
+					console.log(data);
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                	console.log('Error');
+                }
+				
+			});
+		});
+	};
+	
 	$(document).ready(function() {
 		/* enable header sticky */
 		$("header.hdv-fixed .hdv-header").sticky({
@@ -122,5 +145,6 @@
 		}
 		$.fn.searchForm();
 		$.fn.categoryFlip();
+		$.fn.getIMDb();
 	});
 })(jQuery);

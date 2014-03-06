@@ -802,7 +802,6 @@ li.nav-has-sub:hover > ul.nav-sub, ul.nav-sub li {
 	margin:0px;
 }
 #searchForm fieldset {
-	width: 240px;
 	position: relative;
 	display: block;
 	top:12px;
