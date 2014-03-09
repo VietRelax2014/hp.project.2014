@@ -1,0 +1,164 @@
+﻿<style>
+/*---------------------------------------
+    Tabs style
+-----------------------------------------*/
+.dp-tabnav {
+	width: 100%;
+	display: table;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	table-layout: fixed;
+}
+
+.dp-tabnav li {
+	display: table-cell;
+	padding: 5px 0 0;
+	background: #f7f7f7;
+	border: 1px solid #dfdfdf;
+	border-left: none;
+	text-align: center;
+	color: #65686d;
+	line-height: 33px;
+	cursor: pointer;
+	-webkit-transition: background-color 0.3s ease;
+	transition: background-color 0.3s ease;
+}
+
+.dp-tabnav li.description{
+	text-align: right;
+	background: none;
+	border-top: none;
+	border-right: none;
+	position:relative;
+	cursor: auto;
+}
+
+.dp-tabnav li.description a::before{
+	content:'';
+	height: 16px;
+width: 16px;
+position: absolute;
+right: 46px;
+bottom: 7px;
+background: url(https://cdn1.iconfinder.com/data/icons/Tabs_Color_Social/40/Next-Track.png);
+background-size: 16px;
+}
+
+.dp-tabnav li:first-child {
+	border-left: 1px solid #dfdfdf;
+}
+
+.dp-tabnav li.active {
+	background: #fff;
+	border-bottom: none;
+	cursor: default;
+	color: #3a9191;
+}
+
+.dp-tabnav li span {
+	display: block;
+	position: relative;
+	top: -2px;
+	border-bottom: none;
+}
+
+.dp-tabnav li.active span:before {
+	content: '';
+	display: block;
+	width: 80%;
+	margin-left: -40%;
+	left: 50%;
+	position: absolute;
+	top: -4px;
+	border-bottom: none;
+	cursor: default;
+	border-top: 1px solid #319191;
+}
+
+.dp-tab {
+	display: none;
+}
+
+.dp-tabcontent {
+	border: 1px solid #dfdfdf;
+	border-top: none;
+	padding: 10px 20px;
+}
+
+.dp-tab.active {
+	display: block;
+	-webkit-animation: 0.8s cubic-bezier(0.5, 0, 0, 0.5) 0s normal backwards
+		1 fadetab;
+	animation: 0.8s cubic-bezier(0.5, 0, 0, 0.5) 0s normal backwards 1
+		fadetab;
+}
+
+@-webkit-keyframes fadetab { 0% { opacity: 0;} 100%{ opacity:1; } }
+@ keyframes fadetab { 0% { opacity: 0; } 100% { opacity : 1; } }
+
+</style>
+
+<div class="dp-tabs">
+	<ul class="dp-tabnav">
+		<li class="active">
+			<span>Tab1 title</span>
+		</li>
+		<li>
+			<span>Tab2 title</span>
+		</li>
+		<li class="description">
+			<a href="#">Chi tiết</a>
+		</li>
+	</ul>
+	<div class="dp-tabcontent">
+		<div class="dp-tab active">
+				Nội dung tab<br>
+		</div>
+		<div class="dp-tab">
+				Nội dung tab
+				Nội dung tab<br>
+				Nội dung tab<br>
+				Nội dung tab<br>
+				Nội dung tab<br>
+		</div>
+	</div>
+	</div>
+<br>
+<div class="dp-tabs">
+	<ul class="dp-tabnav">
+		<li class="active">
+			<span>Tab1 title</span>
+		</li>
+		<li class="description">
+			<a href="#">Chi tiết</a>
+		</li>
+	</ul>
+	<div class="dp-tabcontent">
+		<div class="dp-tab active">
+				Nội dung tab<br>
+		</div>
+	</div>
+</div>
+
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+
+/**
+ * Tabs
+ */
+
+jQuery(document).ready(function($){
+	// Tabs
+	$('.dp-tabs').on('click', 'li', function() {
+		var li = $(this).index();
+		if($(this).hasClass('description')){
+			return;
+		}
+		$(this).addClass('active').siblings().removeClass('active');
+		$(this).parent().siblings().children().eq(li).addClass('active').siblings().removeClass('active');
+	});
+});
+
+</script>
