@@ -61,15 +61,6 @@ header .hdv-header {
 	max-width: 64px;
 }
 
-/* Search Header*/
-.hdv-search-header {
-	float: right;
-	color: #a9b1bc;
-	line-height: 80px;
-	margin-right: 10px;
-	font-size: 14px;
-}
-
 /* Navigation */
 .hdv-nav {
 	float: right;	
@@ -202,6 +193,11 @@ header.hdv-fixed .hdv-sticky-wrap.hdv-sticky .hdv-header {
     box-shadow: 0 0 3px #888;
 }
 
+/* Container */
+.fhd-container{
+    margin: 0 auto;
+}
+
 /* Footer */
 .hdv-footer {
 	color: #000;
@@ -209,7 +205,7 @@ header.hdv-fixed .hdv-sticky-wrap.hdv-sticky .hdv-header {
 	background: repeat scroll 0 0 #F8F4F8 ;
     border-top: 1px solid #eaebee;
 }
-.hdv-footer .container{
+.hdv-footer .fhd-container{
 	margin: 0 auto;
     width: 90%;
 }
@@ -439,13 +435,13 @@ header.hdv-fixed .hdv-sticky-wrap.hdv-sticky .hdv-header {
 /* ---------------------------------------------------
    Slider styles
 --------------------------------------------------- */
-.slider_container .caption{
+.slider_content .caption{
    transition: all .6s linear;
    -o-transition: all .6s linear;
    -moz-transition: all .6s linear;
    -webkit-transition: all .6s linear;
 }
-.slider_container:hover .caption{
+.slider_content:hover .caption{
 	-webkit-animation: move-left .6s;
     -moz-animation: move-left .6s;
     -o-animation: move-left .6s;

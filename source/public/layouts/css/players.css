@@ -1,8 +1,8 @@
 @CHARSET "UTF-8";
 
-.video_container .fhd-video,.video_container #jw-player_wrapper {
+.video_content .fhd-video,.video_content #jw-player_wrapper {
 	margin: 0 auto;
 }
-.video_container{
+.video_content{
 	height:430px;
 }

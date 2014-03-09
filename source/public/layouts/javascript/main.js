@@ -114,18 +114,41 @@
 	};
 	
 	$.fn.getIMDb = function(){
-		$('.getIMDb').on('click', function(){
-			$('input[name="nameFilm"]').val();
-			/* $.get('http://phphost:69/getIMDb', function(data) {
-		           console.log(data);
-		        });*/
-			var url = $('input[name="nameFilm"]').val();
+		$('.fhd-getIMDb-button').on('click', function(){
+			$('.imdbInfo .info').hide();
+			$('.imdbInfo .imdb-loading').show();
+
+			var url = $('#imdb-id').val();
 			$.ajax({
 				url : "http://phphost:69/getIMDb/"+url.substring(url.lastIndexOf("/") + 1),
 				type : "GET",
 				dataType : "json",
 				success: function(data, textStatus, xhr) {
-					console.log(data);
+					var info = data.imdb;
+					var actors = '';
+					var categories = '';
+
+					$('#imdb-thumb').attr('src', info.thumb);
+					$('#imdb-title').val(info.title);
+					$('#imdb-year').val(info.year);
+					
+					$.each(info.actor, function(idx, value){
+						actors += ( value + ';');
+					});
+					$('#imdb-actor').val(actors);
+
+					$.each(info.category, function(idx, value){
+						categories += (value + ';');
+					});
+					$('#imdb-category').val(categories);
+
+					$('#imdb-director').val(info.director);
+					$('#imdb-duration').val(info.duration);
+					$('#imdb-rate').val(info.rate);
+					
+					$('.imdbInfo .info').show();
+					$('.imdbInfo .imdb-loading').hide();
+					
                 },
                 error: function(xhr, textStatus, errorThrown) {
                 	console.log('Error');

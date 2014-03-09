@@ -1,7 +1,7 @@
 
 <!-- SLIDER CONTAINER
 ********************************************** -->
-<div class="slider_container">
+<div class="slider_content">
 	<div class="slider_wrap slider_emboss pattern_1" id="hdv-slider-wrap">
 		<div data-thumb="{{$sliderArr['poster-thumbs'] or ''}}" data-src="{{$sliderArr['poster'] or ''}}">
 			<div class="caption elemHover ">

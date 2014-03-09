@@ -22,7 +22,8 @@
 @import url("javascript.css");                                          /* Css Styles for Javascript Plugins */
 @import url("players.css");                                             /* Css Styles for Players */
 @import url("camera.css");                                              /* Css Styles for Camera Plugins */
-@import url("style.css");                                              /* Css Styles for Camera Plugins */
+@import url("form.css");                                                /* Css Styles for Form */
+@import url("style.css");                                               /* Css Styles for styles */
 
 /* body font */
 @font-face {

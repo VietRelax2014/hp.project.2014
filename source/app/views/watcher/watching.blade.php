@@ -30,7 +30,7 @@
 	<script type="text/javascript" src="/players/video-player/video.js"></script>
 @endif
 
-	<div class="video_container">
+	<div class="video_content">
 		@if($isJWplayer)
 			<div class="fhd-video">
 				<div id="jw-player">Nội dung khi không có video</div>

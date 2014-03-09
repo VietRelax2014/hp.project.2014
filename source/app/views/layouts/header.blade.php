@@ -19,7 +19,7 @@
 	<!-- Theme Stylesheets
 	================================================== -->
 	{{ HTML::style('/layouts/css/collection.css') }}
-
+	
 	<link rel="stylesheet" href="/layouts/css/colors/red.css" name="colors">
 	<link rel="stylesheet" href="/layouts/css/layout/wide.css" name="layout">
 
@@ -89,4 +89,4 @@
 		</header>
 		<!-- END HEADER
 		================================================== -->
-		
+		<div class="fhd-container">
