@@ -188,6 +188,10 @@
 				<label> <span>Rate</span>
 					<input placeholder="" type="text" id="imdb-rate" required autofocus>
 				</label>
+				<label> <span>Desc</span>
+					<textarea placeholder="" id="imdb-description" required autofocus>
+					</textarea>
+				</label>
 			</div>
 		</div>
 	</form>

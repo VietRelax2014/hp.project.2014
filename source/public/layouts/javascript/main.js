@@ -141,6 +141,7 @@
 						$('#imdb-director').val(info.director);
 						$('#imdb-duration').val(info.duration);
 						$('#imdb-rate').val(info.rate);
+						$('#imdb-description').val(info.description);
 						
 						$('.imdbInfo .info').show();
 					}

@@ -69,10 +69,11 @@ class imdbGetter {
 			$data['rate'] = $match[1];
 		}
 		
-		$regex = '/<p itemprop="description">(.*)<\/p>/';
+		$regex = '/<p itemprop="description">(.*)<\/p>/s';
 		preg_match($regex, $this->page, $match);
 		if (isset($match[1])) {
-			$data['description'] = $match[1];
+			$contentDesc = explode('</p>', $match[1]);
+			$data['description'] = $contentDesc[0];
 		}
 		
 		return $data; 

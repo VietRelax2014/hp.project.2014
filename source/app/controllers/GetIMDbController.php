@@ -21,7 +21,7 @@ class GetIMDbController extends BaseController {
 	}
 
 	public function getIMDbByURL($id)
-	{
+	{		
 		$url = ( 'http://www.imdb.com/title/' . $id . '/');
 		require_once app_path('util/imdbGetter.php');
 		$imdb = new imdbGetter($url);
