@@ -16,8 +16,10 @@ class imdbGetter {
 		curl_close($this->ch);
 		
 		$regex = '/<span class="itemprop" itemprop="name">(.*)<\/span>/';
-		preg_match($regex, $this->page, $match);		
-		$data['title'] = $match[1];
+		preg_match($regex, $this->page, $match);	
+		if (isset($match[1])) {
+			$data['title'] = $match[1];
+		}
 	
 		$regex = '/<a href="\/year\/(.*)\/\?ref_=tt_ov_inf" >(.*)<\/a>/';
 		preg_match($regex, $this->page, $match);
@@ -33,11 +35,15 @@ class imdbGetter {
 
 		$regex = '/<a href="\/genre\/(.*)\?ref_=tt_ov_inf" >/';
 		preg_match_all($regex, $this->page, $match);
-		$data['category'] = $match[1];
+		if (isset($match[1])) {
+			$data['category'] = $match[1];
+		}
 
 		$regex = '/<link rel=\'image_src\' href="(.*)">/';
 		preg_match($regex, $this->page, $match);
-		$data['thumb'] = $match[1];
+		if (isset($match[1])) {
+			$data['thumb'] = $match[1];
+		}
 
 		$regex = '/\/\?ref_=tt_ov_dr" itemprop=\'url\'><span class="itemprop" itemprop="name">(.*)<\/span><\/a>/';
 		preg_match($regex, $this->page, $match);
@@ -47,18 +53,34 @@ class imdbGetter {
 
 		$regex = '/\/\?ref_=tt_ov_st" itemprop=\'url\'><span class="itemprop" itemprop="name">(.*)<\/span><\/a>/';
 		preg_match_all($regex, $this->page, $match);
-		$data['actor'] = $match[1];
+		if (isset($match[1])) {
+			$data['actor'] = $match[1];
+		}
 
 		$regex = '/<time itemprop="duration" datetime="PT(.*)M" >/';
 		preg_match($regex, $this->page, $match);
-		$data['duration'] = $match[1];
+		if (isset($match[1])) {
+			$data['duration'] = $match[1];
+		}
 
 		$regex = '/<strong><span itemprop="ratingValue">(.*)<\/span><\/strong>/';
 		preg_match($regex, $this->page, $match);
-		$data['rate'] = $match[1];
+		if (isset($match[1])) {
+			$data['rate'] = $match[1];
+		}
+		
+		$regex = '/<p itemprop="description">(.*)<\/p>/';
+		preg_match($regex, $this->page, $match);
+		if (isset($match[1])) {
+			$data['description'] = $match[1];
+		}
 		
 		return $data; 
 		unset($data);
+	}
+	
+	public function getValue($val){
+		
 	}
 	
 	public function save_thumbnail() {

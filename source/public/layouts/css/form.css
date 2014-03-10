@@ -28,9 +28,10 @@
 .fhd-form label span {
 	cursor: pointer;
 	color: #991D57;
-	display: block;
 	margin: 5px 0;
 	font-weight: 900;
+	display: inline-block;
+	width:15%;
 }
 
 .fhd-form input[type="text"],.fhd-form input[type="email"],.fhd-form input[type="tel"],.fhd-form input[type="url"],.fhd-form textarea
@@ -44,6 +45,11 @@
 	margin: 0 0 5px;
 	padding: 10px 0px;
 	border-radius: 5px;
+	display: inline-block;
+    width:calc(100% - 15% - 165px);
+    padding-left:10px;
+    line-height: 15px;
+    font-size: 14px;
 }
 
 .fhd-form input[type="text"]:hover,.fhd-form input[type="email"]:hover,.fhd-form input[type="tel"]:hover,.fhd-form input[type="url"]:hover,.fhd-form textarea:hover
@@ -108,13 +114,15 @@
 }
 
 /* Button */
-#fhd-button {
+.fhd-button {
     background-color:#3bb3e0;
     font-family: 'Open Sans', sans-serif;
     font-size:12px;
     text-decoration:none;
     color:#fff;
     position:relative;
+    left:20px;
+    bottom: 5px;
     padding:10px 20px;
     padding-right:50px;
     background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
@@ -139,8 +147,8 @@
     box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999;
 }
 
-#fhd-button:active {
-    top:3px;
+.fhd-button:active {
+    top:-2px;
     background-image: linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
     background-image: -o-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
     background-image: -moz-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
@@ -159,7 +167,7 @@
     box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
 }
 
-#fhd-button::before {
+.fhd-button::before {
     background-color:#2591b4;
     background-image:url(../images/right_arrow.png);
     background-repeat:no-repeat;
@@ -181,7 +189,7 @@
     box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
 }
 
-#fhd-button:active::before {
+.fhd-button:active::before {
     top:50%;
     margin-top:-12px;
     -webkit-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;

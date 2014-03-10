@@ -5,18 +5,30 @@
 	}
 	.imdbInfo .info{
 		display:none;
+		position:relative;
+		margin-top: 40px;
 	}
 	.imdbInfo img{
-		height:200px;
+		height:214px;
+		width: 137px;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+	#imdb-id-label{
+		width:25%;
+	}
+	#imdb-id{
+		width:40%;
 	}
 	
 	
 .imdb-loading {
-  margin: 50px auto;
+  	margin: 50px auto;
 	width: 50px;
 	height: 50px;
-  position: relative;
-  display:none;
+  	position: relative;
+  	display:none;
 }
 
 .container1 > div, .container2 > div, .container3 > div {
@@ -127,11 +139,10 @@
 </style>
 <div class="fhd-getIMDb">
 	<form class="fhd-form" action="/" method="post">
-		<label> <span>URL IMDb : (required)</span>
-			<input placeholder="tt0111161" type="text" id="imdb-id" required autofocus>
+		<label> <span id="imdb-id-label">IMDb ID : (required)</span>
+			<input placeholder="" type="text" id="imdb-id" required autofocus>
+			<a class="fhd-button" href="#"> Get IMDb</a>
 		</label>
-
-		<input type="button" class="fhd-getIMDb-button" id="fhd-button" value="Get IMDb info" />
 
 		<div class="imdbInfo">
 			<div class="imdb-loading">

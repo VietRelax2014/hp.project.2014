@@ -17,13 +17,12 @@ class GetIMDbController extends BaseController {
 
 	public function doView()
 	{
-		
-		return View::make('getIMDbDemo');
+		return View::make('getIMDbDemo' , array('page' => 'imdb'));
 	}
 
-	public function getIMDbByURL($url)
+	public function getIMDbByURL($id)
 	{
-		$url = ( 'http://www.imdb.com/title/' . $url . '/');
+		$url = ( 'http://www.imdb.com/title/' . $id . '/');
 		require_once app_path('util/imdbGetter.php');
 		$imdb = new imdbGetter($url);
 		$data = array(

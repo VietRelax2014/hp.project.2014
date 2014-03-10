@@ -114,44 +114,42 @@
 	};
 	
 	$.fn.getIMDb = function(){
-		$('.fhd-getIMDb-button').on('click', function(){
+		$('.fhd-button').on('click', function(){
+			var url = $('#imdb-id').val();
+			if(url == ''){
+				return;
+			}
+
 			$('.imdbInfo .info').hide();
 			$('.imdbInfo .imdb-loading').show();
-
-			var url = $('#imdb-id').val();
+			
 			$.ajax({
 				url : "http://phphost:69/getIMDb/"+url.substring(url.lastIndexOf("/") + 1),
 				type : "GET",
 				dataType : "json",
 				success: function(data, textStatus, xhr) {
 					var info = data.imdb;
-					var actors = '';
-					var categories = '';
-
-					$('#imdb-thumb').attr('src', info.thumb);
-					$('#imdb-title').val(info.title);
-					$('#imdb-year').val(info.year);
-					
-					$.each(info.actor, function(idx, value){
-						actors += ( value + ';');
-					});
-					$('#imdb-actor').val(actors);
-
-					$.each(info.category, function(idx, value){
-						categories += (value + ';');
-					});
-					$('#imdb-category').val(categories);
-
-					$('#imdb-director').val(info.director);
-					$('#imdb-duration').val(info.duration);
-					$('#imdb-rate').val(info.rate);
-					
-					$('.imdbInfo .info').show();
-					$('.imdbInfo .imdb-loading').hide();
-					
+					if(info.title){
+						$('#imdb-thumb').attr('src', info.thumb);
+						$('#imdb-title').val(info.title);
+						$('#imdb-year').val(info.year);
+						
+						$('#imdb-actor').val(info.actor.join(';'));
+	
+						$('#imdb-category').val(info.category.join(';'));
+	
+						$('#imdb-director').val(info.director);
+						$('#imdb-duration').val(info.duration);
+						$('#imdb-rate').val(info.rate);
+						
+						$('.imdbInfo .info').show();
+					}
                 },
                 error: function(xhr, textStatus, errorThrown) {
                 	console.log('Error');
+                },
+                complete: function(data) {
+                	$('.imdbInfo .imdb-loading').hide();
                 }
 				
 			});
